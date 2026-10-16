@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zanda</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <nav class="sticky top-0 z-50 bg-white shadow-xl">
+        <div class="mx-auto flex h-20 items-center justify-between px-4 sm:px-6">
+            <!-- Logo -->
+            <a href="#" class="text-xl sm:text-3xl font-bold text-black">
+                T-COLECTION
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="home.html" class="text-lg text-black hover:text-yellow-700  transition">
+                    Home
+                </a>
+                <a href="Men.html" class="text-lg text-black hover:text-yellow-700  transition">
+                    Men
+                </a>
+                <a href="women.html" class="text-lg text-black hover:text-yellow-700 transition">
+                    Wo-men
+                </a>
+                <a href="Kid.html" class="text-lg text-black hover:text-yellow-700 transition">
+                    Kid
+                </a>
+            </div>
+
+            <!-- Desktop Right Side -->
+            <div class="hidden lg:flex items-center gap-4">
+                <!-- Search -->
+                <div class="relative w-64">
+                    <input type="text" placeholder="Search products..."
+                        class="w-full rounded-full border border-gray-300 py-3 pl-5 pr-12 outline-none focus:border-black transition" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
+                    </svg>
+                </div>
+
+                <!-- Cart -->
+                <button class="relative p-2 text-gray-700 hover:text-black" aria-label="Cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                        stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437m0 0L6.75 12.75a2.25 2.25 0 0 0 2.178 1.687h6.894a2.25 2.25 0 0 0 2.178-1.687l1.434-5.728H5.106ZM9 19.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm8.25 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                    </svg>
+                    <span
+                        class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+                        0
+                    </span>
+                </button>
+                <button class="relative p-2 text-gray-700 hover:text-black" aria-label="heart">
+                    <i class="fa-regular fa-heart text-xl"></i>
+                    <span
+                        class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+                        0
+                    </span>
+                </button>
+
+                <!-- Login -->
+                <button class="rounded-lg bg-black px-5 py-3 text-white shadow-md transition hover:bg-gray-800">
+                    Login
+                </button>
+            </div>
+
+            <!-- Mobile Right Side -->
+            <div class="flex items-center gap-2 lg:hidden">
+                <!-- Mobile Cart -->
+                <button class="relative p-2 text-gray-700" aria-label="Cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                        stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437m0 0L6.75 12.75a2.25 2.25 0 0 0 2.178 1.687h6.894a2.25 2.25 0 0 0 2.178-1.687l1.434-5.728H5.106ZM9 19.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm8.25 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                    </svg>
+                    <span
+                        class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+                        0
+                    </span>
+                </button>
+                <button class="relative p-2 text-gray-700 hover:text-black" aria-label="heart">
+                    <i class="fa-regular fa-heart text-xl"></i>
+                    <span
+                        class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+                        0
+                    </span>
+                </button>
+                <!-- Hamburger -->
+                <button id="menuBtn" class="rounded-lg p-2 text-gray-700 hover:bg-gray-100" aria-label="Open menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden border-t bg-white px-5 py-5 lg:hidden">
+            <!-- Search -->
+            <div class="relative mb-5">
+                <input type="text" placeholder="Search products..."
+                    class="w-full rounded-full border border-gray-300 py-3 pl-5 pr-12 outline-none focus:border-black" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
+                </svg>
+            </div>
+
+            <!-- Links -->
+            <div class="flex flex-col gap-1">
+                <a href="home.html" class="rounded-lg px-4 py-3 font-medium hover:text-yellow-700">
+                    Home
+                </a>
+                <a href="Men.html" class="rounded-lg px-4 py-3 font-medium hover:text-yellow-700">
+                    Men
+                </a>
+                <a href="women.html" class="rounded-lg px-4 py-3 font-medium hover:hover:text-yellow-700 ">
+                    Wo-men
+                </a>
+                <a href="Kid.html" class="rounded-lg px-4 py-3 font-medium hover:text-yellow-700 ">
+                    Kid
+                </a>
+
+                <!-- Login -->
+                <button class="mt-3 w-full rounded-lg bg-black px-5 py-3 font-semibold text-white hover:bg-gray-800">
+                    Login
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!---->
+    <div id="mobileMenu" class="hidden border-t bg-white px-5 py-5 lg:hidden">
+        <!-- Search -->
+        <div class="relative mb-5">
+            <input type="text" placeholder="Search products..."
+                class="w-full rounded-full border border-gray-300 py-3 pl-5 pr-12 outline-none focus:border-black" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                class="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
+            </svg>
+        </div>
+    
+        <!-- Links -->
+        <div class="flex flex-col gap-1">
+            <a href="home.html" class="rounded-lg px-4 py-3 font-medium hover:text-yellow-700">
+                Home
+            </a>
+            <a href="Men.html" class="rounded-lg px-4 py-3 font-medium hover:text-yellow-700">
+                Men
+            </a>
+            <a href="women.html" class="rounded-lg px-4 py-3 font-medium hover:hover:text-yellow-700 ">
+                Wo-men
+            </a>
+            <a href="Kid.html" class="rounded-lg px-4 py-3 font-medium hover:text-yellow-700 ">
+                Kid
+            </a>
+    
+            <!-- Login -->
+            <button class="mt-3 w-full rounded-lg bg-black px-5 py-3 font-semibold text-white hover:bg-gray-800">
+                Login
+            </button>
+        </div>
+    </div>
+    </nav>
+   <!-- filter product -->
+<div class="w-full bg-white/80 backdrop-blur border-b border-gray-200 
+            px-4 sm:px-6 lg:px-8 py-3 sm:py-4 
+            flex flex-col sm:flex-row sm:items-center sm:justify-between 
+            gap-3 sm:gap-6">
+
+    <!-- Back -->
+    <button type="button" class="group inline-flex items-center gap-2 self-start 
+           text-base sm:text-lg font-semibold text-gray-800 
+           hover:text-black transition-colors duration-200">
+        <i class="fa-solid fa-arrow-left-long text-sm sm:text-base
+              transition-transform duration-200 
+              group-hover:-translate-x-1"></i>
+        <span>Back</span>
+    </button>
+
+    <!-- Filter -->
+    <div class="flex items-center gap-3 w-full sm:w-auto">
+        <label for="ideas" class="text-sm sm:text-base font-medium text-gray-500 whitespace-nowrap">
+            Short by
+        </label>
+
+        <div class="relative flex-1 sm:flex-none sm:min-w-[180px]">
+            <select id="ideas" name="ideas" class="appearance-none w-full 
+               text-sm sm:text-base font-semibold text-gray-800 
+               bg-gray-50 border border-gray-200 
+               rounded-xl pl-4 pr-10 py-2.5 
+               cursor-pointer
+               shadow-sm
+               hover:bg-gray-100 hover:border-gray-300
+               focus:outline-none focus:ring-2 focus:ring-black/10 focus:border-gray-400
+               transition-all duration-200">
+                <option value="">Filter</option>
+                <option value="tshirt">T-shirt</option>
+                <option value="long-sleev">Long-Sleev</option>
+                <option value="jack-kit">Jack Kit</option>
+                <option value="jeans">Jeans</option>
+                <option value="baggy-jeans">Baggy Jeans</option>
+                <option value="shose">Shose</option>
+            </select>
+
+            <!-- Custom chevron -->
+            <i class="fa-solid fa-chevron-down 
+                pointer-events-none 
+                absolute right-3 top-1/2 -translate-y-1/2 
+                text-xs text-gray-500"></i>
+        </div>
+    </div>
+</div>
+    <!-- Text and our products -->
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-center py-9 text-lg md:text-xl lg:text-2xl">ALL OUT PRODUCTS</h1>
+        <p class="text-lg md:text-lg leading-tight text-center pb-16">Discover modern essentials and timeless styles designed for every occasion. Find the perfect pieces to elevate your
+        everyday wardrobe.</p>
+        <div id="men" class="grid grid-cols-2 md:grid-cols-4 gap-2"></div>
+    </div>
+    <!--footer-->
+    <Footer class="bg-white text-black">
+        <div class="max-w-7xl mx-auto px-4 py-14">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+                <div>
+                    <h2 class="text-2xl font-bold tracking-wide">T-COLECTION</h2>
+                    <p class="mt-4 text-sm leading-6 text-neutral-400 tracking-wide">It fits a modern clothing ecommerce
+                        website and works well with a black/white footer design.</p>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-2xl font-bold tracking-wide">SHOP</h2>
+                    <a href="home.html" class="text-xl mt-2">Home</a>
+                    <a href="Men.html" class="text-xl mt-2">Men</a>
+                    <a href="women.html" class="text-xl mt-2">Wo-men</a>
+                    <a href="Kid.html" class="text-xl mt-2">Kid</a>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-2xl font-bold tracking-wide">Contact</h2>
+                    <p class="mt-2"><i class="fa-solid fa-envelope" style="color: rgb(1, 0, 7);"></i> : Email</p>
+                    <p class="mt-2"><i class="fa-brands fa-facebook" style="color: rgb(1, 0, 7);"></i> : Facebook</p>
+                    <p class="mt-2"><i class="fa-brands fa-telegram" style="color: rgb(1, 0, 7);"></i> : Telegram</p>
+                    <p class="mt-2"><i class="fa-brands fa-tiktok" style="color: rgb(1, 0, 7);"></i> : Tiktok</p>
+                    <p class="mt-2"><i class="fa-solid fa-square-phone" style="color: rgb(1, 0, 7);"></i> : Call</p>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-2xl font-bold tracking-wide">Time Working</h2>
+                    <p class="mt-2"><i class="fa-solid fa-calendar" style="color: rgb(1, 0, 7);"></i> : Monday - Sunday
+                    </p>
+                    <p class="mt-2"><i class="fa-solid fa-alarm-clock" style="color: rgb(1, 0, 7);"></i> : 8 : 00AM - 10
+                        : 00PM</p>
+                </div>
+            </div>
+        </div>
+    </Footer>
+    <script src="../Javascrip/app.js"></script>
+    <script src="../Javascrip/products.js"></script>
+</body>
+</html>
